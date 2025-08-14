@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="keywords" content="รถตู้เช่าภูเก็ต, เช่ารถตู้พร้อมคนขับ, รถตู้ VIP ภูเก็ต, Phuket van rental, ทัวร์ส่วนตัวภูเก็ต, ท่องเที่ยวภูเก็ต">
     <meta name="description" content="Phuket Little Tour บริการรถตู้เช่าภูเก็ต VIP พร้อมคนขับ บริการเป็นกันเอง ปลอดภัย ราคายุติธรรม จองง่าย เที่ยวได้ทั่วภูเก็ตและใกล้เคียง">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" href="{{ asset('img/van.png') }}" type="image/png">
 
     <!-- Icon Font Stylesheet -->
