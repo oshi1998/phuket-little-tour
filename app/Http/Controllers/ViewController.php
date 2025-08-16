@@ -14,4 +14,19 @@ class ViewController extends Controller
         });
         return view('home', compact('tripGallery'));
     }
+
+    public function aboutView()
+    {
+        return view('about');
+    }
+
+    public function reviewView()
+    {
+        return view('review');
+    }
+
+    public function contactView()
+    {
+        return view('contact');
+    }
 }
