@@ -26,7 +26,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="container">
 
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -75,13 +75,35 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-sm navbar-light">
                 <a href="#" class="navbar-brand p-0">
                     <h1 class="text-primary mb-0"><img src="{{ asset('img/van.png') }}" alt=""> Phuket Little Tour</h1>
                 </a>
-                <small class="ms-3 fw-semibold text-dark">
-                    ยินดีต้อนรับสู่ Phuket Little Tour ทุกวินาทีที่เข้ามา คุณจะได้รับแต่ความสุข ความรัก ความสดใส
-                </small>
+
+                <!-- Toggler for Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Nav items -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item {{ Route::is('home.view') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('home.view') }}">หน้าหลัก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">เกี่ยวกับเรา</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">รีวิวลูกค้า</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ติดต่อเรา</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
                 <div class="d-flex flex-shrink-0 ps-4">
                     <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
                         <i class="fa fa-phone-alt fa-2x"></i>
@@ -91,13 +113,14 @@
                     </a>
                     <div class="d-flex flex-column ms-3">
                         <span>ติดต่อสอบถาม</span>
-                        <span class="text-dark">Call: <a href="tel:062 482 9114">062 482 9114</a></span>
-                        <span class="text-dark">Line: Zee276</span>
+                        <span class="text-dark">Call: <a href="tel:0624829114">062 482 9114</a></span>
+                        <span class="text-dark">Line: <a href="line://ti/p/@953tmupy">@953tmupy</a></span>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
+
     <!-- Navbar & Hero End -->
 
     <!-- Carousel Start -->
@@ -115,7 +138,7 @@
                                 <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
                                     <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="https://web.facebook.com/profile.php?id=100094720734879&sk=videos" target="_blank"><i class="fas fa-play-circle me-2"></i> ดูวิดีโอบริการ</a>
                                     <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="tel:062 482 9114"> <i class="fas fa-phone"></i> 062 482 9114</a>
-                                    <a class="btn btn-success rounded-pill py-3 px-4 px-md-5 ms-2" href="#"><i class="fa-brands fa-line"></i> Zee276</a>
+                                    <a class="btn btn-success rounded-pill py-3 px-4 px-md-5 ms-2" href="line://ti/p/@953tmupy"><i class="fa-brands fa-line"></i> @953tmupy</a>
                                 </div>
 
                             </div>
@@ -146,7 +169,7 @@
                                 </p>
                                 <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
                                     <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="tel:062 482 9114"> <i class="fas fa-phone"></i> 062 482 9114</a>
-                                    <a class="btn btn-success rounded-pill py-3 px-4 px-md-5 ms-2" href="#"><i class="fa-brands fa-line"></i> Zee276</a>
+                                    <a class="btn btn-success rounded-pill py-3 px-4 px-md-5 ms-2" href="line://ti/p/@953tmupy"><i class="fa-brands fa-line"></i> @953tmupy</a>
                                 </div>
                             </div>
                         </div>
