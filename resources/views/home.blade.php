@@ -1,61 +1,33 @@
-@extends('phuketlittletour')
+@extends('app')
 
 @section('content')
-<!-- Carousel Start -->
-<div class="header-carousel owl-carousel">
-    <div class="header-carousel-item">
-        <div class="carousel-caption">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-7 animated fadeInLeft">
-                        <div class="text-sm-center text-md-start">
-                            <h1 class="display-1 text-white mb-4">เช่ารถตู้ภูเก็ต VIP พร้อมคนขับ</h1>
-                            <p class="mb-5 fs-5">
-                                สะดวก ปลอดภัย บริการด้วยใจ เราพาคุณเที่ยวรอบเกาะภูเก็ตในแบบที่คุณเลือกได้เอง
-                            </p>
-                            <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
-                                <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="https://web.facebook.com/profile.php?id=100094720734879&sk=videos" target="_blank"><i class="fas fa-play-circle me-2"></i> ดูวิดีโอบริการ</a>
-                                <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="tel:062 482 9114"> <i class="fas fa-phone"></i> 062 482 9114</a>
-                                <a class="btn btn-success rounded-pill py-3 px-4 px-md-5 ms-2" href="line://ti/p/@953tmupy"><i class="fa-brands fa-line"></i> @953tmupy</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 animated fadeInRight">
-                        <div class="calrousel-img" style="object-fit: cover;">
-                            <img src="{{ asset('img/carousel-1.jpg') }}" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<!-- Blog Start -->
+<div class="container-fluid blog py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp">
+            <h4 class="text-primary">บรรยากาศจากทริป</h4>
+            <h1 class="display-4 mb-4">ลูกค้าเดินทางกับเราประทับใจ</h1>
+            <p class="mb-0">
+                ขอบคุณลูกค้าทุกท่านที่ไว้ใจ Phuket Little Tour นี่คือตัวอย่างบางส่วนจากทริปที่เราได้ให้บริการ ทั้งเที่ยวครอบครัว กลุ่มเพื่อน และงานอีเวนต์
+            </p>
         </div>
-    </div>
-    <div class="header-carousel-item">
-        <div class="carousel-caption">
-            <div class="container">
-                <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
-                    <div class="col-lg-5 animated fadeInLeft">
-                        <div class="calrousel-img">
-                            <img src="{{ asset('img/carousel-1.jpg') }}" class="img-fluid w-100" alt="">
+        <div class="row g-4 justify-content-center">
+            @foreach($tripGallery as $gallery)
+            <div class="col-lg-6 col-xl-4 wow fadeInUp">
+                <a href="{{ $gallery }}" data-lightbox="trip" data-title="ขอบคุณลูกค้าทุกท่านที่ไว้ใจ Phuket Little Tour นี่คือตัวอย่างบางส่วนจากทริปที่เราได้ให้บริการ ทั้งเที่ยวครอบครัว กลุ่มเพื่อน และงานอีเวนต์">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="{{ $gallery }}" class="img-fluid trip-img-fixed rounded-top w-100">
                         </div>
                     </div>
-                    <div class="col-lg-7 animated fadeInRight">
-                        <div class="text-sm-center text-md-end">
-                            <h1 class="display-1 text-white mb-4">บริการระดับมืออาชีพ</h1>
-                            <p class="mb-5 fs-5">
-                                คนขับประสบการณ์สูง บริการสุภาพ พร้อมแนะนำสถานที่ท่องเที่ยวแบบคนในพื้นที่ให้คุณ
-                            </p>
-                            <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="tel:062 482 9114"> <i class="fas fa-phone"></i> 062 482 9114</a>
-                                <a class="btn btn-success rounded-pill py-3 px-4 px-md-5 ms-2" href="line://ti/p/@953tmupy"><i class="fa-brands fa-line"></i> @953tmupy</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
+            @endforeach
         </div>
     </div>
 </div>
-<!-- Carousel End -->
+<!-- Blog End -->
 
 <!-- Feature Start -->
 <div class="container-fluid feature bg-white py-5">
@@ -203,28 +175,16 @@
 </div>
 <!-- Service End -->
 
-<!-- Blog Start -->
-<div class="container-fluid blog py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp">
-            <h4 class="text-primary">บรรยากาศจากทริป</h4>
-            <h1 class="display-4 mb-4">ลูกค้าเดินทางกับเราประทับใจ</h1>
-            <p class="mb-0">
-                ขอบคุณลูกค้าทุกท่านที่ไว้ใจ Phuket Little Tour นี่คือตัวอย่างบางส่วนจากทริปที่เราได้ให้บริการ ทั้งเที่ยวครอบครัว กลุ่มเพื่อน และงานอีเวนต์
-            </p>
-        </div>
-        <div class="row g-4 justify-content-center">
-            @foreach($tripGallery as $gallery)
-            <div class="col-lg-6 col-xl-4 wow fadeInUp">
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <img src="{{ $gallery }}" class="img-fluid trip-img-fixed rounded-top w-100">
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</div>
-<!-- Blog End -->
+@endsection
+
+
+@section('scripts')
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': "ดูภาพ %1 จาก %2",
+        'disableScrolling': true
+    });
+</script>
 @endsection

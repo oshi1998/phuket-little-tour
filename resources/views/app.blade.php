@@ -35,8 +35,11 @@
                 <a href="#" class="me-3">
                     <i class="fas fa-map-marker-alt text-primary me-1"></i> ตำแหน่งที่ตั้ง
                 </a>
-                <a href="mailto:Zee17094@gmail.com">
+                <a href="mailto:Zee17094@gmail.com" class="me-3">
                     <i class="fas fa-envelope text-primary me-1"></i> Zee170940@gmail.com
+                </a>
+                <a href="tel:0624829114">
+                    <i class="fas fa-phone text-primary me-1"></i> 062-482-9114
                 </a>
             </div>
 
@@ -123,6 +126,10 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js')}}"></script>
+
+
+    @yield('scripts')
+
 </body>
 
 </html>

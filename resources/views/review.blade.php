@@ -1,4 +1,4 @@
-@extends('phuketlittletour')
+@extends('app')
 
 @section('content')
 <div class="container-fluid page-header py-5 mb-5">
