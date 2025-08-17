@@ -5,27 +5,27 @@
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="text-center mb-4">
-                <h2 class="fw-bold">เกี่ยวกับเรา</h2>
+                <h2 class="fw-bold">{{ __('app.about_page_title') }}</h2>
             </div>
             <div class="row g-4 align-items-start">
                 <div class="col-md-7">
                     <div class="bg-light p-4 rounded shadow-sm h-100">
                         <p>
-                            <strong>Phuket Little Tour</strong> เราคือผู้ให้บริการรถตู้ท่องเที่ยวในจังหวัดภูเก็ต ที่มุ่งเน้นการบริการด้วยใจ ความปลอดภัย และความสะดวกสบายของลูกค้าเป็นสำคัญ ไม่ว่าคุณจะมาเที่ยวแบบครอบครัว คู่รัก หรือหมู่คณะ เราพร้อมดูแลคุณตลอดการเดินทาง
+                            <strong>Phuket Little Tour</strong> {{ __('about.p1') }}
                         </p>
                         <p>
-                            ด้วยประสบการณ์ในวงการท่องเที่ยวท้องถิ่น เรารู้จักทุกมุมของภูเก็ต ทั้งสถานที่ยอดนิยม และโลเคชั่นลับที่นักท่องเที่ยวไม่ควรพลาด ทีมงานคนขับของเราทุกคนเป็นมืออาชีพ ขับขี่ปลอดภัย สุภาพ และตรงต่อเวลา พร้อมแนะนำเส้นทางหรือสถานที่ท่องเที่ยวตามความต้องการของคุณ
+                            {{ __('about.p2') }}
                         </p>
-                        <h5 class="mt-4">บริการของเรา:</h5>
+                        <h5 class="mt-4">{{ __('about.service_title') }}:</h5>
                         <ul>
-                            <li>รถตู้ปรับอากาศ VIP พร้อมคนขับ</li>
-                            <li>รับ-ส่งสนามบิน</li>
-                            <li>ทัวร์รอบเกาะภูเก็ต / เขาหลัก / พังงา / กระบี่</li>
-                            <li>บริการรายวัน หรือแบบเหมาเป็นชั่วโมง</li>
-                            <li>แพ็กเกจเที่ยวแบบส่วนตัว</li>
+                            <li>{{ __('about.service_list1') }}</li>
+                            <li>{{ __('about.service_list2') }}</li>
+                            <li>{{ __('about.service_list3') }}</li>
+                            <li>{{ __('about.service_list4') }}</li>
+                            <li>{{ __('about.service_list5') }}</li>
                         </ul>
                         <p>
-                            <strong>Phuket Little Tour</strong> อยากให้ทุกการเดินทางของคุณในภูเก็ตเป็นเรื่องง่าย สนุก และน่าประทับใจ เพราะเรารู้ว่าทริปดีๆ เริ่มต้นจากการเดินทางที่ดี
+                            <strong>Phuket Little Tour</strong> {{ __('about.p3') }}
                         </p>
                     </div>
                 </div>

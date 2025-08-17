@@ -6,19 +6,22 @@
 <div class="container-fluid blog py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp">
-            <h4 class="text-primary">บรรยากาศจากทริป</h4>
-            <h1 class="display-4 mb-4">ลูกค้าเดินทางกับเราประทับใจ</h1>
+            <h4 class="text-primary">{{ __('home.blog_title') }}</h4>
+            <h1 class="display-4 mb-4">{{ __('home.blog_sub_title') }}</h1>
             <p class="mb-0">
-                ขอบคุณลูกค้าทุกท่านที่ไว้ใจ Phuket Little Tour นี่คือตัวอย่างบางส่วนจากทริปที่เราได้ให้บริการ ทั้งเที่ยวครอบครัว กลุ่มเพื่อน และงานอีเวนต์
+                {{ __('home.blog_description') }}
             </p>
         </div>
         <div class="row g-4 justify-content-center">
-            @foreach($tripGallery as $gallery)
+            <video class="w-100" controls>
+                <source src="{{ asset('video/170868_hbd.mp4') }}" type="video/mp4">
+            </video>
+            @foreach($tripImages as $img)
             <div class="col-lg-6 col-xl-4 wow fadeInUp">
-                <a href="{{ $gallery }}" data-lightbox="trip" data-title="ขอบคุณลูกค้าทุกท่านที่ไว้ใจ Phuket Little Tour นี่คือตัวอย่างบางส่วนจากทริปที่เราได้ให้บริการ ทั้งเที่ยวครอบครัว กลุ่มเพื่อน และงานอีเวนต์">
+                <a href="{{ $img }}" data-lightbox="trip" data-title="{{ __('home.blog_description') }}">
                     <div class="blog-item">
                         <div class="blog-img">
-                            <img src="{{ $gallery }}" class="img-fluid trip-img-fixed rounded-top w-100">
+                            <img src="{{ $img }}" class="img-fluid trip-img-fixed rounded-top w-100">
                         </div>
                     </div>
                 </a>
@@ -33,11 +36,9 @@
 <div class="container-fluid feature bg-white py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp">
-            <h4 class="text-primary">จุดเด่นของเรา</h4>
-            <h1 class="display-4 mb-4">บริการรถตู้ภูเก็ต ที่คุณวางใจได้</h1>
-            <p class="mb-0">
-                เราใส่ใจทุกการเดินทางของคุณ ด้วยรถตู้ VIP สะอาด ปลอดภัย คนขับมืออาชีพ พร้อมดูแลคุณตลอดทริปในแบบที่คุณเลือกเองได้
-            </p>
+            <h4 class="text-primary">{{ __('home.feature_title') }}</h4>
+            <h1 class="display-4 mb-4">{{ __('home.feature_sub_title') }}</h1>
+            <p class="mb-0">{{ __('home.feature_description') }}</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
@@ -45,10 +46,8 @@
                     <div class="feature-icon text-success p-4 mb-4">
                         <i class="fas fa-shuttle-van fa-3x"></i>
                     </div>
-                    <h4 class="mb-4">รถตู้ใหม่ สะอาดทุกคัน</h4>
-                    <p class="mb-4">
-                        รถตู้ VIP แอร์เย็น เบาะกว้าง ทำความสะอาดก่อน-หลังทุกทริป เดินทางได้อย่างมั่นใจทุกเส้นทาง
-                    </p>
+                    <h4 class="mb-4">{{ __('home.feature_item1_title') }}</h4>
+                    <p class="mb-4">{{ __('home.feature_item1_description') }}</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
@@ -56,10 +55,8 @@
                     <div class="feature-icon text-primary p-4 mb-4">
                         <i class="fas fa-user-tie fa-3x"></i>
                     </div>
-                    <h4 class="mb-4">คนขับเป็นกันเอง ประสบการณ์สูง</h4>
-                    <p class="mb-4">
-                        รู้จักเส้นทางในภูเก็ตและใกล้เคียง พร้อมแนะนำสถานที่ท่องเที่ยวแบบคนในพื้นที่ ให้คุณได้ทุกเมื่อ
-                    </p>
+                    <h4 class="mb-4">{{ __('home.feature_item2_title') }}</h4>
+                    <p class="mb-4">{{ __('home.feature_item2_description') }}</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
@@ -67,10 +64,8 @@
                     <div class="feature-icon text-warning p-4 mb-4">
                         <i class="fas fa-route fa-3x"></i>
                     </div>
-                    <h4 class="mb-4">วางแผนเส้นทางได้เอง</h4>
-                    <p class="mb-4">
-                        อยากไปจุดชมวิว คาเฟ่ ตลาด หรือหาด แจ้งเราได้เลย ปรับแผนเที่ยวได้ตามใจคุณ ไม่ต้องยึดตามโปรแกรม
-                    </p>
+                    <h4 class="mb-4">{{ __('home.feature_item3_title') }}</h4>
+                    <p class="mb-4">{{ __('home.feature_item3_description') }}</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
@@ -78,10 +73,8 @@
                     <div class="feature-icon text-info p-4 mb-4">
                         <i class="fa fa-headphones fa-3x"></i>
                     </div>
-                    <h4 class="mb-4">ติดต่อสะดวก 24 ชั่วโมง</h4>
-                    <p class="mb-4">
-                        ไม่ว่าจะจองรถ หรือสอบถามข้อมูล เราพร้อมให้บริการผ่านโทรศัพท์ ไลน์ หรือ Facebook ได้ตลอดทั้งวัน
-                    </p>
+                    <h4 class="mb-4">{{ __('home.feature_item4_title') }}</h4>
+                    <p class="mb-4">{{ __('home.feature_item4_description') }}</p>
                 </div>
             </div>
         </div>
@@ -93,13 +86,11 @@
 <div class="container-fluid service bg-white py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp">
-            <h4 class="text-primary">บริการของเรา</h4>
-            <h1 class="display-4 mb-4">ให้บริการเพื่อการเดินทางของคุณ</h1>
-            <p class="mb-0">เราพร้อมอำนวยความสะดวกในการเดินทางของคุณ ทั้งรับส่งสนามบิน เช่าเหมารถ และบริการอื่น ๆ ที่คุณต้องการ</p>
+            <h4 class="text-primary">{{ __('home.service_title') }}</h4>
+            <h1 class="display-4 mb-4">{{ __('home.service_sub_title') }}</h1>
+            <p class="mb-0">{{ __('home.service_description') }}</p>
         </div>
         <div class="row g-4 justify-content-center">
-
-            <!-- บริการ: รับส่งสนามบิน -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
                 <div class="service-item">
                     <div class="service-img">
@@ -110,14 +101,12 @@
                     </div>
                     <div class="service-content p-4">
                         <div class="service-content-inner">
-                            <a href="#" class="d-inline-block h4 mb-4">รับส่งสนามบิน</a>
-                            <p class="mb-4">บริการรับ-ส่งสนามบินตรงเวลา สะดวกสบาย พร้อมคนขับมืออาชีพ</p>
+                            <a href="#" class="d-inline-block h4 mb-4">{{ __('home.service_item1_title') }}</a>
+                            <p class="mb-4">{{ __('home.service_item1_description') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- บริการ: เช่าเหมารถ -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
                 <div class="service-item">
                     <div class="service-img">
@@ -128,14 +117,12 @@
                     </div>
                     <div class="service-content p-4">
                         <div class="service-content-inner">
-                            <a href="#" class="d-inline-block h4 mb-4">เช่าเหมารถพร้อมคนขับ</a>
-                            <p class="mb-4">บริการเช่ารถแบบส่วนตัว คนขับสุภาพ รู้เส้นทาง ปลอดภัยทุกเส้นทาง</p>
+                            <a href="#" class="d-inline-block h4 mb-4">{{ __('home.service_item2_title') }}</a>
+                            <p class="mb-4">{{ __('home.service_item2_description') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- บริการ: ไกด์ทัวร์ -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
                 <div class="service-item">
                     <div class="service-img">
@@ -146,14 +133,12 @@
                     </div>
                     <div class="service-content p-4">
                         <div class="service-content-inner">
-                            <a href="#" class="d-inline-block h4 mb-4">ไกด์ทัวร์ส่วนตัว</a>
-                            <p class="mb-4">ท่องเที่ยวอย่างมั่นใจ มีไกด์ท้องถิ่นแนะนำสถานที่และวัฒนธรรม</p>
+                            <a href="#" class="d-inline-block h4 mb-4">{{ __('home.service_item3_title') }}</a>
+                            <p class="mb-4">{{ __('home.service_item3_description') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- บริการ: จองโรงแรม -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
                 <div class="service-item">
                     <div class="service-img">
@@ -164,8 +149,8 @@
                     </div>
                     <div class="service-content p-4">
                         <div class="service-content-inner">
-                            <a href="#" class="d-inline-block h4 mb-4">จองโรงแรม</a>
-                            <p class="mb-4">บริการแนะนำที่พัก และจองโรงแรมคุณภาพดี ราคาพิเศษ</p>
+                            <a href="#" class="d-inline-block h4 mb-4">{{ __('home.service_item4_title') }}</a>
+                            <p class="mb-4">{{ __('home.service_item4_description') }}</p>
                         </div>
                     </div>
                 </div>

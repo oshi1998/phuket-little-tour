@@ -8,11 +8,11 @@ class ViewController extends Controller
 {
     public function homeView()
     {
-        $tripGallery = File::files(public_path('img/trip-gallery'));
-        $tripGallery = collect($tripGallery)->map(function ($file) {
-            return asset('img/trip-gallery/' . $file->getFilename());
+        $tripImages = File::files(public_path('img/trips'));
+        $tripImages = collect($tripImages)->map(function ($file) {
+            return asset('img/trips/' . $file->getFilename());
         });
-        return view('home', compact('tripGallery'));
+        return view('home', compact('tripImages'));
     }
 
     public function aboutView()
@@ -20,9 +20,13 @@ class ViewController extends Controller
         return view('about');
     }
 
-    public function reviewView()
+    public function momentsView()
     {
-        return view('review');
+        $momentImages = File::files(public_path('img/moments'));
+        $momentImages = collect($momentImages)->map(function ($file) {
+            return asset('img/moments/' . $file->getFilename());
+        });
+        return view('moments', compact('momentImages'));
     }
 
     public function contactView()

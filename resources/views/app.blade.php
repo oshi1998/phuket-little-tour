@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8">
@@ -33,7 +33,7 @@
             <!-- Left: Contact -->
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="#" class="me-3">
-                    <i class="fas fa-map-marker-alt text-primary me-1"></i> ตำแหน่งที่ตั้ง
+                    <i class="fas fa-map-marker-alt text-primary me-1"></i> {{ __('app.location_title') }}
                 </a>
                 <a href="mailto:Zee17094@gmail.com" class="me-3">
                     <i class="fas fa-envelope text-primary me-1"></i> Zee170940@gmail.com
@@ -52,13 +52,17 @@
                 </div>
                 <div class="dropdown ms-3">
                     <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown">
-                        <small><i class="fas fa-globe-europe text-primary me-1"></i> ไทย</small>
+                        <small>
+                            <i class="fas fa-globe-europe text-primary me-1"></i>
+                            {{ app()->getLocale() === 'th' ? 'ไทย' : 'English' }}
+                        </small>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="#">ไทย</a>
-                        <a class="dropdown-item" href="#">English (Under Development)</a>
+                        <a class="dropdown-item" href="{{ route('lang.switch', 'en') }}">English</a>
+                        <a class="dropdown-item" href="{{ route('lang.switch', 'th') }}">ไทย</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -81,16 +85,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item {{ Route::is('home.view') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('home.view') }}">หน้าหลัก</a>
+                        <a class="nav-link" href="{{ route('home.view') }}">{{ __('app.home_page_title') }}</a>
                     </li>
                     <li class="nav-item {{ Route::is('about.view') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('about.view') }}">เกี่ยวกับเรา</a>
+                        <a class="nav-link" href="{{ route('about.view') }}">{{ __('app.about_page_title') }}</a>
                     </li>
-                    <li class="nav-item {{ Route::is('review.view') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('review.view') }}">รีวิวลูกค้า</a>
+                    <li class="nav-item {{ Route::is('moments.view') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('moments.view') }}">{{ __('app.moments_page_title') }}</a>
                     </li>
                     <li class="nav-item {{ Route::is('contact.view') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('contact.view') }}">ติดต่อเรา</a>
+                        <a class="nav-link" href="{{ route('contact.view') }}">{{ __('app.contact_page_title') }}</a>
                     </li>
                 </ul>
             </div>
