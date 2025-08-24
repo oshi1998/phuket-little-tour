@@ -14,7 +14,7 @@
                         <p class="mb-1"><strong>{{ __('contact.company_info_title') }}:</strong> Phuket Little Tour</p>
                         <p class="mb-1"><strong>{{ __('contact.tel_info_title') }}:</strong> <a href="tel:0624829114">062-482-9114</a></p>
                         <p class="mb-1"><strong>{{ __('contact.email_info_title') }}:</strong> <a href="mailto:Zee17094@gmail.com" class="me-3">Zee170940@gmail.com</a></p>
-                        <p class="mb-3"><strong>{{ __('contact.address_info_title') }}:</strong> -</p>
+                        <p class="mb-3"><strong>{{ __('contact.address_info_title') }}:</strong> {{ __('contact.address_detail') }}</p>
                         
                         <div class="mt-2">
                             <h6 class="fw-bold">{{ __('contact.other_contact_title') }}:</h6>
